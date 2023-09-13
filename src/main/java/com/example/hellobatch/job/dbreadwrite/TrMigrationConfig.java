@@ -1,4 +1,4 @@
-package com.example.hellobatch.job.datarw;
+package com.example.hellobatch.job.dbreadwrite;
 
 import com.example.hellobatch.core.domain.accounts.Accounts;
 import com.example.hellobatch.core.domain.accounts.AccountsRepository;

@@ -26,3 +26,13 @@
   - ItemReader: A 테이블에서 정보를 읽어오기
   - ItemProcessor: A 테이블의 정보를 B 테이블에 넣을 수 있도록 데이터를 가공
   - ItemWriter: B 테이블에 가공된 정보를 밀어넣기
+
+#### 5. 파일에서 값 읽어오고 작성하기
+- csv 파일에서 , 로 값을 파싱하여 자바 클래스로 만들고, 이를 다시 csv 파일로 기록할 수 있다
+- FlatFileItemReader/FlatFileItemWriter에서 제공하는 여러 기능들을 통해 해당 기능 구현 가능
+  - lineTokenizer
+  - fieldSetMapper
+  - linesToSkip
+  - BeanWrapperFieldExtractor
+  - DelimitedLineAggregator
+  - FileSystemResource
