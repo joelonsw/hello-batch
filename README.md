@@ -36,3 +36,13 @@
   - BeanWrapperFieldExtractor
   - DelimitedLineAggregator
   - FileSystemResource
+
+#### 6. 하나의 Job에 여러 Step 등록하기
+- Job에 Step 여러개를 등록할 수 있다
+  - `.start(스텝1).next(스텝2).next(스텝3).build()` 
+  - 이렇게 등록한 순차적인 Step에 이전 Step의 데이터를 `ExecutionContext`에 데이터를 `.put()`, `.get()`을 통해 전달할 수 있다.
+- Job의 Step의 결과값에 따라 차후 실행할 Step을 지정할 분기처리도 가능하다. 
+  - `.start(원스텝).on(A상황).to(A스텝).on(B상황).to(B스텝)`
+
+#### 7. 테스트 코드 작성하기
+- 기존 Junit과 JobLauncherTestUtils를 활용하여 배치잡을 돌릴 수 있는 환경을 테스트에서 구축할 수 있다.
