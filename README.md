@@ -19,3 +19,10 @@
 #### 3. JobListener
 - Job 리스너를 통해, 해당 Job을 수행할 때 전/후에 일관적인 처리를 넣어줄 수 있도록 함
 - Job의 status를 통해 해당 Job이 실패한 경우 장애 리포트 조치 등의 로직을 넣어줄 수 있음
+
+#### 4. DB 데이터 이관하기
+- Entity + JpaRepository를 통해 A 테이블의 정보를 B 테이블로 옮길 수 있다
+- Job이 Step을 구동시키는데, Step을 하기의 단계들로 차례차례 구동시킬 수 있다
+  - ItemReader: A 테이블에서 정보를 읽어오기
+  - ItemProcessor: A 테이블의 정보를 B 테이블에 넣을 수 있도록 데이터를 가공
+  - ItemWriter: B 테이블에 가공된 정보를 밀어넣기

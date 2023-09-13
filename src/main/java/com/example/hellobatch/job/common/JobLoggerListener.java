@@ -1,4 +1,4 @@
-package com.example.hellobatch.job.joblistener;
+package com.example.hellobatch.job.common;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.BatchStatus;
