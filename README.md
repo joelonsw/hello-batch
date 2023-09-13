@@ -46,3 +46,7 @@
 
 #### 7. 테스트 코드 작성하기
 - 기존 Junit과 JobLauncherTestUtils를 활용하여 배치잡을 돌릴 수 있는 환경을 테스트에서 구축할 수 있다.
+
+#### 8. Scheduler를 통한 Job Cron 등록
+- JobLauncher를 통해 코드레벨에서 배치 Job을 실행 시킬 수 있음
+- 이때, 스케줄러로 실행시키고자 하는 Job을 메서드로 분리해, `@Scheduled`를 활용해 돌아가게 만들어두자!
